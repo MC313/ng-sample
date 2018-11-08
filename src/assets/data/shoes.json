@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "name": "Air Jordan 1",
+        "image": "",
+        "price": 200,
+        "description": "The Air Jordan 1 (I) was designed by Peter Moore and marked a new era in basketball shoewear design. There has been multiple fakes of this shoe and also other shoe brands made models where you could see lots of similarities with Air Jordan 1. The Air Jordan 1 – Black / Varsity Red model was banned by the NBA back in 1985 due to NBA color rules and this actually helped to create more publicity and interest for the shoes. Who knows, it might have been a marketing trick from Nike.",
+        "sizes": [
+            "8",
+            "9",
+            "9.5",
+            "10",
+            "10.5"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Air Jordan 2",
+        "image": "",
+        "price": 200,
+        "description": "No black leather in Italy? The Air Jordan II was designed by Bruce Kilgore and just as its predecessor (Air Jordan 1 (I)) it showed a great innovative design. The low-tops were very stylish, produced in Italy and were far from the ordinary basketball shoe.",
+        "sizes": [
+            "8",
+            "8.5",
+            "9",
+            "9.5",
+            "10",
+            "10.5",
+            "11"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Air Jordan 3",
+        "image": "",
+        "price": 200,
+        "description": "The new shoe was excellent. The design was totally different from the Air Jordan 1 (I) and Air Jordan 2 (II) and was the first pair of Air Jordans that showed a visible air sole. Behind it stood Tinker Hatfield who since then have designed every Air Jordan model up to the Air Jordan 15 (XV). This was also the very first Air Jordan to feature the Jumpman logotype instead of the Wings-logo that was on the Air Jordan 1 (I) and Air Jordan 2 (II). This might be one of the most popular Air Jordan’s ever. It has won numerous polls when questioning which the greatest sneaker through all times is. Air Jordan fans also freaked out when they retroed this model in 1994. Shoe stores once again had major problems selling them though.",
+        "sizes": [
+            "8.5",
+            "9.5",
+            "10.5",
+            "11.5",
+            "12.5"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Air Jordan 4",
+        "image": "",
+        "price": 200,
+        "description": "The Air Jordan 4 was released in 1989. Michael kept on playing in a confident and dominating way and won numerous honors and awards. The design, by Mr. Hatfield, wasn’t as revolutionary as the previous designs and kept a lot of the feeling from the third model. The Air Jordan shoes had started to get major popularity by now and sold out every here and there.",
+        "sizes": [
+            "8",
+            "9",
+            "9.5",
+            "10",
+            "10.5"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Air Jordan 5",
+        "image": "",
+        "price": 200,
+        "description": "Once again Hatfield came up with a revolutionary design for the new shoe. A few elements were picked up from its predecessor but it featured a great silver/reflex tounge and a clear/see-through rubber sole which gave it a totally unique look. Also there were lacelocks which made it easy to strap them on. The design is rumoured to be inspired by the WW2 Mustang fighter plane and the most obvious elements that shows this are the shark teeth shapes on the midsole",
+        "sizes": [
+            "6.5",
+            "8.5",
+            "10",
+            "11"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Air Jordan 6",
+        "image": "",
+        "price": 200,
+        "description": "at is there to say else than Hatfield created another classic. This time with a rubber tounge featuring two holes which the bearer could use to easily get the kicks on. He kept the idea with clear rubber soles and lace locks from the Air Jordan 5 (V)s but apart from that this felt like a brand new AJ design. The pattern on the shoe was interesting. If you looked at it in different angels and with a little bit of imagination you could see the number 23. The figure 2 standing up on the back of the shoe and the figure 3 lying down facing the ground close to the laces (soon there will be a picture illustrating this).",
+        "sizes": [
+            "8.5",
+            "9",
+            "9.5"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Air Jordan 7",
+        "image": "",
+        "price": 200,
+        "description": "Hatfield created a shoe with lots of similarities with the previous model. What was unique with the Air Jordan VII‘s was that they used some of the Nike Huarache technology to create a shoe that really stuck to your foot. What also made you either frown or smile was the fact that the visible air sole, the Nike Air logo, and the yellowing soles all were gone.",
+        "sizes": [
+            "7",
+            "9",
+            "11"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Air Jordan 8",
+        "image": "",
+        "price": 200,
+        "description": "The eighth model of the Air Jordan was one heavy thing. Its base was clearly close to its predecessor but it had a lot more details, color and accents. It had cross-over velcro/leather straps and was so padded your foot got surprised. Due to the thick padding the shoe was heavy and also easily got very warm. Who knows, maybe the heat could have been the reason why Michael was bothered with athlete’s foot infections during the season.",
+        "sizes": [
+            "7",
+            "9",
+            "10",
+            "10.5",
+            "11"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Air Jordan 9",
+        "image": "",
+        "price": 200,
+        "description": "The shoe being released was plain and sturdy and was the first model that Michael did not wear in an NBA seasonal game (due to the retirement). The sole had lots of details and a large 23 was stiched at the back of the shoe.",
+        "sizes": [
+            "7",
+            "8",
+            "8.5",
+            "9",
+            "9.5",
+            "10",
+            "11"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Air Jordan 10",
+        "image": "",
+        "price": 200,
+        "description": "It seemed as if Nike wasn’t expecting to see Jordan back in the game so soon. They started to re-release older model’s of the AJ series (Air Jordan 1 (I), Air Jordan 2 (II), Air Jordan 3 (III)) and the Air Jordan 10 (X)‘s soles featured an honor or an award from each year Michael had spent in the NBA. Apart from these soles the design was no real surprise and was overall very plain. Hatfield picked up a few design elements from previous models and you could see some obvious signs of influence from the Air Jordan 3 (III)‘s, the Air Jordan 5 (V)‘s and the Air Jordan 6 (VI)‘s.",
+        "sizes": [
+            "7",
+            "7.5",
+            "8",
+            "9",
+            "10",
+            "11"
+        ]
+    }
+]

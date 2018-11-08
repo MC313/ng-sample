@@ -1,0 +1,4 @@
+<section class="shoes" [class.animate-section]="animateSection">
+    <app-shoe *ngFor="let shoe of shoes$ | async" [shoeInfo]="shoe" (addToCart)=addToCart($event)>
+    </app-shoe>
+</section>
