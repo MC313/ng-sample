@@ -1,13 +1,18 @@
 <section class="cart">
-    <p class="cart__title">CART</p>
-    <div class="cart__icon" (click)="showHideCartProducts()">
-        <button type="button">Show</button>
+    <div class="cart__icon">
+        <div class="counter" *ngIf="(products$ | async) as products">
+            {{products.length}}
+        </div>
+        <button type="button" (click)="showHideCartProducts()">
+            <i class="material-icons">shopping_cart</i>
+        </button>
     </div>
+    <p class="cart__title">CART</p>
+    <ul class="cart__products" *ngIf="(products$ | async) as products">
+        <app-product *ngFor="let product of products" [productInfo]="product"></app-product>
+    </ul>
     <div class="cart__total">
         <p>Total</p>
         <app-total-price [totalPrice]="totalPrice$ | async"></app-total-price>
     </div>
-    <ul class="cart__products" *ngIf="(products$ | async).length > 0">
-        <app-product *ngFor="let product of products$ | async" [productInfo]="product"></app-product>
-    </ul>
 </section>
