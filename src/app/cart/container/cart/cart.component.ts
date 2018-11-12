@@ -5,6 +5,7 @@ import { Store, select } from '@ngrx/store';
 import { CartState } from '../../store/cart.state';
 import * as CartActions from '../../store/cart.actions';
 import { selectProductsInCart, selectProductsTotalPrice } from '../../store/cart.selectors';
+import { Product } from '../../Product';
 
 @Component({
     selector: 'app-cart',
@@ -14,7 +15,8 @@ import { selectProductsInCart, selectProductsTotalPrice } from '../../store/cart
 export class CartComponent implements OnInit {
     constructor(private store$: Store<CartState>) { }
 
-    @Output() toggleCart: EventEmitter<boolean> = new EventEmitter();
+    @Output() toggleCart = new EventEmitter<boolean>();
+
     products$ = this.store$.pipe(select(selectProductsInCart));
     totalPrice$ = this.store$.pipe(select(selectProductsTotalPrice));
 
@@ -22,7 +24,11 @@ export class CartComponent implements OnInit {
         this.store$.dispatch(new CartActions.LoadCartAction);
     }
 
-    showHideCartProducts() {
+    removeFromCart(product: Product) {
+        this.store$.dispatch(new CartActions.RemoveProductAction(product));
+    }
+
+    showHideCart() {
         this.toggleCart.emit();
     }
 }

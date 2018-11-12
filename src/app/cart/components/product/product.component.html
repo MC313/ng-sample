@@ -1,7 +1,7 @@
 <div class="product">
     <p class="product__name">{{product.name}}</p>
     <p class="product__price">{{product.price | currency: 'USD'}}</p>
-    <button type="button" class="product__remove">
+    <button type="button" class="product__remove" (click)="removeProductFromCart(product)">
         <i class="material-icons">delete_forever</i>
     </button>
 </div>

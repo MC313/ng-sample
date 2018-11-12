@@ -7,11 +7,10 @@ import { Shoe } from '../../Shoe';
   styleUrls: ['./shoe.component.scss']
 })
 export class ShoeComponent implements OnInit {
+  constructor() { }
 
   @Input() shoeInfo: Shoe;
-  @Output() addToCart: EventEmitter<Shoe> = new EventEmitter();
-
-  constructor() { }
+  @Output() addToCart = new EventEmitter<Shoe>();
 
   ngOnInit() { }
 

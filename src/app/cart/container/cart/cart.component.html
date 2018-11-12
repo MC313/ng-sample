@@ -3,13 +3,13 @@
         <div class="counter" *ngIf="(products$ | async) as products">
             {{products.length}}
         </div>
-        <button type="button" (click)="showHideCartProducts()">
+        <button type="button" (click)="showHideCart()">
             <i class="material-icons">shopping_cart</i>
         </button>
     </div>
     <p class="cart__title">CART</p>
     <ul class="cart__products" *ngIf="(products$ | async) as products">
-        <app-product *ngFor="let product of products" [productInfo]="product"></app-product>
+        <app-product *ngFor="let product of products" [productInfo]="product" (removeFromCart)="removeFromCart($event)"></app-product>
     </ul>
     <div class="cart__total">
         <p>Total</p>
