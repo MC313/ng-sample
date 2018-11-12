@@ -23,13 +23,13 @@ export function reducer(state: ShoeState = initialState, action: ShoeActions): S
                 shoes: action.payload
             }
 
-        case ShoeActionTypes.SHOW_SHOE_DETAILS_ACTION:
+        case ShoeActionTypes.SHOW_SHOE_DETAILS:
             return {
                 ...state,
                 selectedShoe: action.payload
             };
 
-        case ShoeActionTypes.HIDE_SHOE_DETAILS_ACTION:
+        case ShoeActionTypes.HIDE_SHOE_DETAILS:
             return {
                 ...state,
                 selectedShoe: null

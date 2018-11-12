@@ -26,7 +26,7 @@ export class ShoesComponent implements OnInit {
 
   addToCart(shoe: Shoe) {
     const product = { ...shoe, quantity: 1 };
-    this.store$.dispatch(new CartActions.AddProductAction(product));
+    this.store$.dispatch(new CartActions.AddProduct(product));
   }
 
 }

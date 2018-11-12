@@ -106,14 +106,17 @@ Products
 .product {
     display: grid;
     grid-template-areas:
-            'name price remove';
-    grid-template-columns: auto 100px 100px;
+            'name quantity price remove';
+    grid-template-columns: 100px auto 100px 100px;
     grid-template-rows: 75px;
     align-items: center;
     margin-bottom: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     &__name {
         grid-area: name;
+    }
+    &__quantity {
+        grid-area: quantity;
     }
     &__price {
         grid-area: price;

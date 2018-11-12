@@ -21,11 +21,11 @@ export class CartComponent implements OnInit {
     totalPrice$ = this.store$.pipe(select(selectProductsTotalPrice));
 
     ngOnInit() {
-        this.store$.dispatch(new CartActions.LoadCartAction);
+        this.store$.dispatch(new CartActions.LoadCart());
     }
 
     removeFromCart(product: Product) {
-        this.store$.dispatch(new CartActions.RemoveProductAction(product));
+        this.store$.dispatch(new CartActions.RemoveProduct(product));
     }
 
     showHideCart() {

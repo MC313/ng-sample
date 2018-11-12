@@ -9,32 +9,32 @@ export enum CartActionTypes {
     REMOVE_PRODUCT = '[Cart] Remove Product From Cart Action'
 }
 
-export class LoadCartAction implements Action {
+export class LoadCart implements Action {
     readonly type = CartActionTypes.LOAD_CART;
 
     //constructor(public payload: Cart = { products: [], totalPrice: 0 }) { }
 }
 
-export class AddProductAction implements Action {
+export class AddProduct implements Action {
     readonly type = CartActionTypes.ADD_PRODUCT;
 
     constructor(public payload: Product) { }
 }
 
-export class RemoveProductAction implements Action {
+export class RemoveProduct implements Action {
     readonly type = CartActionTypes.REMOVE_PRODUCT;
 
     constructor(public payload: Product) { }
 }
 
-export class UpdateProductAction implements Action {
+export class UpdateProduct implements Action {
     readonly type = CartActionTypes.UPDATE_PRODUCT;
 
     constructor(public payload: Product) { }
 }
 
 export type CartActions =
-    LoadCartAction |
-    AddProductAction |
-    UpdateProductAction |
-    RemoveProductAction;
+    LoadCart |
+    AddProduct |
+    UpdateProduct |
+    RemoveProduct;
