@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { StoreModule } from '@ngrx/store';
@@ -21,6 +22,7 @@ import { ShopComponent } from './shop/shop.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    RouterModule,
     AppRoutingModule,
     StoreModule.forRoot({}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],

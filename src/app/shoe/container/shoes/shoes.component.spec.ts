@@ -8,9 +8,9 @@ describe('ShoesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShoesComponent ]
+      declarations: [ShoesComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('ShoesComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create shoes component', () => {
     expect(component).toBeTruthy();
   });
 });
