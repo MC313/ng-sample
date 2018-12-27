@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { StoreModule, Store } from '@ngrx/store';
 
@@ -7,6 +8,7 @@ import { Shoe } from '../../Shoe';
 import { ShoeComponent } from '../../components/shoe/shoe.component';
 import { ShoeState } from '../../store/shoe.state';
 import { ShoesComponent } from './shoes.component';
+import * as CartActions from '../../../cart/store/cart.actions';
 import * as ShoeActions from '../../store/shoe.actions';
 
 describe('ShoesComponent', () => {
@@ -37,6 +39,7 @@ describe('ShoesComponent', () => {
         spyOn(store, 'dispatch').and.callThrough();
         fixture = TestBed.createComponent(ShoesComponent);
         component = fixture.componentInstance;
+        fixture.detectChanges();
     });
 
     it('should create shoes component', () => {
@@ -49,9 +52,26 @@ describe('ShoesComponent', () => {
         expect(store.dispatch).toHaveBeenCalledWith(action);
     });
 
-    it('should call addToCart method when child emits addToCart event', () => {
-        component.ngOnInit();
-        const action = new ShoeActions.LoadShoesRequest();
+    it('should display a list of shoes after shoes are loaded', () => {
+        const shoes: Shoe[] = [shoe];
+        const action = new ShoeActions.LoadShoesSuccess([shoe]);
+        store.dispatch(action);
+        component.shoes$.subscribe(shoesData => {
+            expect(shoesData.length).toEqual(shoes.length);
+        })
+    });
+
+    it('should call addToCart method when child component emits "addToCart" event', () => {
+        spyOn(component, 'addToCart');
+        const shoeComponents = fixture.debugElement.queryAll(By.directive(ShoeComponent));
+        (<ShoeComponent>shoeComponents[0].componentInstance).addToCart.emit(shoe);
+        expect(component.addToCart).toHaveBeenCalledWith(shoe);
+    });
+
+    it('should dispatch an action to add product to cart when addToCart method is called', () => {
+        component.addToCart(shoe);
+        const product: Shoe & { quantity: 1 } = { ...shoe, quantity: 1 };
+        const action = new CartActions.AddProduct(product);
         expect(store.dispatch).toHaveBeenCalledWith(action);
     });
 

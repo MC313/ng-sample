@@ -18,7 +18,7 @@ export class ShoesComponent implements OnInit {
   constructor(private store$: Store<ShoeState>) { }
 
   @Input() animateSection: boolean;
-  shoes$ = this.store$.pipe(select(selectAllShoes));
+  shoes$ = this.store$.pipe<Shoe[]>(select(selectAllShoes));
 
   ngOnInit() {
     this.store$.dispatch(new ShoeActions.LoadShoesRequest());
