@@ -23,7 +23,7 @@ export function reducer(state: CartState = initialState, action: CartActions): C
                 products = [...state.products];
                 // Update the current product with the new quantity
                 product = { ...products[currentProductIndex], quantity: products[currentProductIndex].quantity += 1 };
-                // Update product's array with updated product
+                // Update product's state with updated product
                 products[currentProductIndex] = product;
             }
             return {

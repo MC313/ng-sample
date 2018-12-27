@@ -1,0 +1,5 @@
+- Create shoe-details component 
+  * figure out the best approach to toggle showing and hiding shoe details component (Cdk, custom, etc)
+  * remove 'add to cart' button from shoe item of home screen and place into shoe details component
+  * add shoe size selection to shoe details component
+  

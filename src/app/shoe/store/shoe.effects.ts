@@ -20,7 +20,7 @@ export class ShoeEffects {
         .ofType(ShoeActions.ShoeActionTypes.LOAD_SHOES_REQUEST)
         .pipe(
             switchMap(() => this.shoeService.getShoes()),
-            map((shoes: Shoe[]) => new ShoeActions.LoadShoesSuccessAction(shoes)),
+            map((shoes: Shoe[]) => new ShoeActions.LoadShoesSuccess(shoes)),
             catchError((error) => error)
         )
 

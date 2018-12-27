@@ -21,7 +21,7 @@ export class ShoesComponent implements OnInit {
   shoes$ = this.store$.pipe(select(selectAllShoes));
 
   ngOnInit() {
-    this.store$.dispatch(new ShoeActions.LoadShoesRequestAction());
+    this.store$.dispatch(new ShoeActions.LoadShoesRequest());
   }
 
   addToCart(shoe: Shoe) {

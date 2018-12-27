@@ -10,35 +10,35 @@ export enum ShoeActionTypes {
     HIDE_SHOE_DETAILS = '[Shoe] Hide Shoe Details'
 }
 
-export class LoadShoesRequestAction implements Action {
+export class LoadShoesRequest implements Action {
     readonly type = ShoeActionTypes.LOAD_SHOES_REQUEST;
 }
 
-export class LoadShoesSuccessAction implements Action {
+export class LoadShoesSuccess implements Action {
     readonly type = ShoeActionTypes.LOAD_SHOES_SUCCESS;
 
     constructor(public payload: Shoe[]) { }
 }
 
-export class LoadShoesFailureAction implements Action {
+export class LoadShoesFailure implements Action {
     readonly type = ShoeActionTypes.LOAD_SHOES_FAILURE;
 
     constructor(public payload: any) { }
 }
 
-export class ShowShoeDetailsAction implements Action {
+export class ShowShoeDetails implements Action {
     readonly type = ShoeActionTypes.SHOW_SHOE_DETAILS;
 
     constructor(public payload: number) { }
 }
 
-export class HideShoeDetailsAction implements Action {
+export class HideShoeDetails implements Action {
     readonly type = ShoeActionTypes.HIDE_SHOE_DETAILS;
 }
 
 export type ShoeActions =
-    LoadShoesRequestAction |
-    LoadShoesSuccessAction |
-    LoadShoesFailureAction |
-    ShowShoeDetailsAction |
-    HideShoeDetailsAction;
+    LoadShoesRequest |
+    LoadShoesSuccess |
+    LoadShoesFailure |
+    ShowShoeDetails |
+    HideShoeDetails;

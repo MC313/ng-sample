@@ -1,15 +1,12 @@
-import { DebugElement, ElementRef } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShoeComponent } from './shoe.component';
 import { Shoe } from '../../Shoe';
 
 describe('ShoeComponent', () => {
-  let addToCartButton: ElementRef;
+  let button;
+  let buttonElement: HTMLElement;
   let component: ShoeComponent;
-  let debugElement: DebugElement;
   let fixture: ComponentFixture<ShoeComponent>;
   const shoe: Shoe = {
     id: 0,
@@ -19,34 +16,35 @@ describe('ShoeComponent', () => {
     price: 100.00
   };
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ShoeComponent]
-    })
-      .compileComponents();
-  }));
+    });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(ShoeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
-    debugElement = fixture.debugElement;
-    addToCartButton = debugElement.query(By.css('button'));
+    buttonElement = fixture.nativeElement;
+    button = buttonElement.querySelector('button');
   });
 
   it('should create shoe component', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeDefined();
   });
 
-  xit('should emit an event when the button is clicked', () => {
-    spyOn(component.addToCart, 'emit');
-    addToCartButton.nativeElement.click();
-    expect(component.addToCart.emit).toHaveBeenCalled();
-  })
+  it('should contain a button with "Add to Cart" text', () => {
+    expect(button.textContent).toEqual('Add to Cart');
+  });
 
-  xit('should emit an event containing shoe data', () => {
+  it('should trigger emit event when "Add to Cart" button is clicked', () => {
     spyOn(component.addToCart, 'emit');
-    addToCartButton.nativeElement.click();
+    button.click();
+    expect(component.addToCart.emit).toHaveBeenCalled();
+  });
+
+  it('should emit shoe info when "Add to Cart" button is clicked', () => {
+    spyOn(component.addToCart, 'emit');
+    component.addShoeToCart(shoe);
     expect(component.addToCart.emit).toHaveBeenCalledWith(shoe);
-  })
+  });
+
 });
