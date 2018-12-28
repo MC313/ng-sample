@@ -4,7 +4,7 @@ import { CartActions, CartActionTypes } from '../store/cart.actions';
 import { Product } from '../Product';
 import { CartState } from './cart.state';
 
-const initialState: CartState = {
+export const initialState: CartState = {
     products: [],
 };
 
