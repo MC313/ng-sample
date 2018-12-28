@@ -16,7 +16,7 @@ export const selectProductsTotalPrice = createSelector(
     (cartState: CartState) => {
         /*
             Get the total for each individual product based
-            on price and quantity of produc
+            on price and quantity of product
         */
         const getProductPriceTotal = (product: Product) =>
             product.price * product.quantity;

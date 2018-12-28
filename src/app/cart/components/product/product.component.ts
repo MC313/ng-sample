@@ -11,12 +11,12 @@ export class ProductComponent implements OnInit {
     constructor() { }
 
     @Input('productInfo') product: Product;
-    @Output() removeFromCart = new EventEmitter<Product>();
+    @Output() removeProduct = new EventEmitter<Product>();
 
 
     ngOnInit() { }
 
-    removeProductFromCart(product: Product) {
-        this.removeFromCart.emit(product);
+    remove(product: Product) {
+        this.removeProduct.emit(product);
     }
 }

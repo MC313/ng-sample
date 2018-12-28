@@ -6,10 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class TotalPriceComponent implements OnInit {
+    constructor() { }
 
     @Input() totalPrice: number;
-
-    constructor() { }
 
     ngOnInit() { }
 }

@@ -6,8 +6,8 @@ import { StoreModule, Store } from '@ngrx/store';
 import { reducer } from '../../store/shoe.reducer';
 import { Shoe } from '../../Shoe';
 import { ShoeComponent } from '../../components/shoe/shoe.component';
-import { ShoeState } from '../../store/shoe.state';
 import { ShoesComponent } from './shoes.component';
+import { ShoeState } from '../../store/shoe.state';
 import * as CartActions from '../../../cart/store/cart.actions';
 import * as ShoeActions from '../../store/shoe.actions';
 
@@ -35,11 +35,11 @@ describe('ShoesComponent', () => {
             ],
         });
 
-        store = TestBed.get(Store);
-        spyOn(store, 'dispatch').and.callThrough();
         fixture = TestBed.createComponent(ShoesComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
+        store = TestBed.get(Store);
+        spyOn(store, 'dispatch').and.callThrough();
     });
 
     it('should create shoes component', () => {

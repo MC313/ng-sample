@@ -1,10 +1,9 @@
 import * as CartReducer from './cart.reducer';
 import * as CartActions from './cart.actions';
-import { Cart } from '../Cart';
 import { Product } from '../Product';
 import { CartState } from './cart.state';
 
-describe('cart.reducer', () => {
+describe('CartReducer', () => {
     const { initialState } = CartReducer;
     const products: Product[] = [{
         id: 1,

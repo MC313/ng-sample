@@ -17,10 +17,12 @@ export class CartComponent implements OnInit {
 
     @Output() toggleCart = new EventEmitter<boolean>();
 
-    products$ = this.store$.pipe(select(selectProductsInCart));
-    totalPrice$ = this.store$.pipe(select(selectProductsTotalPrice));
+    products$ = this.store$.pipe<Product[]>(select(selectProductsInCart));
+    totalPrice$ = this.store$.pipe<number>(select(selectProductsTotalPrice));
 
     ngOnInit() {
+        // This may not be needed
+        // LoadCart action seems uneccessary
         this.store$.dispatch(new CartActions.LoadCart());
     }
 
