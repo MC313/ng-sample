@@ -1,5 +1,6 @@
 <section class="shop">
     <app-cart (toggleCart)="showHideCartProducts($event)"></app-cart>
     <app-shoes [animateSection]="animateShoesContainer"></app-shoes>
+    <shoe-details *ngIf="overlayState === 'SHOWING'" [details]="selectedShoe" [overlayState]="overlayState">
+    </shoe-details>
 </section>
-<!-- <router-outlet></router-outlet> -->

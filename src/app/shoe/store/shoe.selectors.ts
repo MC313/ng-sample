@@ -8,6 +8,7 @@ const selectFeature = createFeatureSelector<AppState, ShoeState>('shoe');
 
 export const selectAllShoes = createSelector(
     selectFeature,
-    (shoeState: ShoeState): Shoe[] => shoeState.shoes
+    ({ shoes }): Shoe[] => shoes
 );
+
 

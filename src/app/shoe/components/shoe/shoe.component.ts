@@ -11,11 +11,16 @@ export class ShoeComponent implements OnInit {
 
   @Input() shoeInfo: Shoe;
   @Output() addToCart = new EventEmitter<Shoe>();
+  @Output() showDetails = new EventEmitter<number>();
 
   ngOnInit() { }
 
   addShoeToCart(shoe: Shoe) {
     this.addToCart.emit(shoe);
+  }
+
+  showShoeDetails(shoe: Shoe) {
+    this.showDetails.emit(shoe.id);
   }
 
 }

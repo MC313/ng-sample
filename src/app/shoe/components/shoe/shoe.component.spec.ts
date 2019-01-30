@@ -25,6 +25,7 @@ describe('ShoeComponent', () => {
     component = fixture.componentInstance;
     buttonElement = fixture.nativeElement;
     button = buttonElement.querySelector('button');
+    spyOn(component.addToCart, 'emit');
   });
 
   it('should create shoe component', () => {
@@ -36,13 +37,11 @@ describe('ShoeComponent', () => {
   });
 
   it('should trigger emit event when "Add to Cart" button is clicked', () => {
-    spyOn(component.addToCart, 'emit');
     button.click();
     expect(component.addToCart.emit).toHaveBeenCalled();
   });
 
-  it('should emit shoe info when "Add to Cart" button is clicked', () => {
-    spyOn(component.addToCart, 'emit');
+  it('should emit shoe info when "addShoeToCart" method is called with shoe info parameter', () => {
     component.addShoeToCart(shoe);
     expect(component.addToCart.emit).toHaveBeenCalledWith(shoe);
   });

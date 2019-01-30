@@ -141,7 +141,6 @@ Shoes
     background-color: #fff;
     color: #000;
     transition: transform 0.4s ease;
-
     &.animate-section {
         transform: translateY(80%);
     }
@@ -155,4 +154,45 @@ Shoes
     align-items: center;
     justify-content: center;
     border: 1px solid #999;
+}
+
+.details-overlay-container {
+    width: 100%;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    .backdrop {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background-color: black;
+    }
+}
+
+.overlay-details {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    transform: translateX(110%);
+    @media screen and (min-width: 650px) {
+        width: 65%;
+        padding: 25px;
+    }
+    .overlay-close {
+        width: 50px;
+        height: 50px;
+        border-style: none;
+        font-size: 40px;
+        color: #fff;
+        background-color: #000;
+    }
+    .overlay-content {
+        padding: 50px;
+    }
 }
