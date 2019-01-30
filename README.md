@@ -1,6 +1,6 @@
 # ShoeStore
 
-The idea behind this application is to used it to experiment with integrating 3rd party technologies on new patterns into an Angular application.
+The purpose of this application is to use it to experiment with integrating 3rd party technologies and new design patterns into an Angular application.
 
 Current Technologies Integrated:
 - [ngrx](https://github.com/ngrx)
