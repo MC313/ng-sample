@@ -1,8 +1,14 @@
 # ShoeStore
 
-This is a simple angular project with the following techologies integrated into it:
-- [ngrx](https://github.com/ngrx) (coming soon)
+The idea behind this application is to used it to experiment with integrating 3rd party technologies on new patterns into an Angular application.
+
+Current Technologies Integrated:
+- [ngrx](https://github.com/ngrx)
 - lodash/fp
-- [emotion](https://emotion.sh) (coming soon)
-- [immutablejs](https://facebook.github.io/immutable-js) (coming soon)
+- unit testing
+
+Potential Technologies/Conceptes to be Integrated:
+- progressive web application (PWA)
+- [emotion](https://emotion.sh)
+- [immutablejs](https://facebook.github.io/immutable-js)
 

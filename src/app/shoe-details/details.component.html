@@ -1,4 +1,4 @@
-<section class="details-overlay-container" [@showHideContainer]="overlayState === 'HIDDEN' ? 'hide' : 'show'">
+<section class="details-overlay-container" [ngClass]="{'hide': overlayState === 'HIDDEN', 'show': overlayState === 'SHOWING'}">
   <div class="backdrop" [@showHideBackdrop]="overlayState === 'HIDDEN' ? 'hide' : 'show'" (click)="hideDetails()"></div>
   <div class="overlay-details" [@showHideDetails]="overlayState === 'HIDDEN' ? 'hide' : 'show'">
     <button class="overlay-close" aria-label="Close shoe details overlay" (click)="hideDetails()">
