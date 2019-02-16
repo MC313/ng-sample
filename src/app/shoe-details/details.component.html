@@ -1,15 +1,17 @@
-<section class="details-overlay-container" [ngClass]="{'hide': overlayState === 'HIDDEN', 'show': overlayState === 'SHOWING'}">
+<section class="overlay-container" [ngClass]="{'hide': overlayState === 'HIDDEN', 'show': overlayState === 'SHOWING'}">
   <div class="backdrop" [@showHideBackdrop]="overlayState === 'HIDDEN' ? 'hide' : 'show'" (click)="hideDetails()"></div>
   <div class="overlay-details" [@showHideDetails]="overlayState === 'HIDDEN' ? 'hide' : 'show'">
     <button class="overlay-close" aria-label="Close shoe details overlay" (click)="hideDetails()">
       &times;
     </button>
     <article class="overlay-content">
-      <p>{{details.name}}</p>
-      <p>{{details.description}}</p>
-      <p>{{details.price}}</p>
+      <div class="cart-action">
+        <p class="name">{{details.name}}</p>
+        <div class="divider"></div>
+        <p class="price">{{details.price | currency: 'USD'}}</p>
+      </div>
+      <button class="add-to-cart" (click)="addToCart(details)">Add To Cart</button>
+      <p class="description">{{details.description}}</p>
     </article>
   </div>
 </section>
-
-<!-- [ngClass]="{'hide': overlayState === 'HIDDEN', 'show': overlayState === 'SHOWING'}" -->

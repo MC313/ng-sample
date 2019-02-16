@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Shoe } from '../../Shoe';
 
 @Component({
@@ -6,18 +6,11 @@ import { Shoe } from '../../Shoe';
   templateUrl: './shoe.component.html',
   styleUrls: ['./shoe.component.scss']
 })
-export class ShoeComponent implements OnInit {
+export class ShoeComponent {
   constructor() { }
 
   @Input() shoeInfo: Shoe;
-  @Output() addToCart = new EventEmitter<Shoe>();
   @Output() showDetails = new EventEmitter<number>();
-
-  ngOnInit() { }
-
-  addShoeToCart(shoe: Shoe) {
-    this.addToCart.emit(shoe);
-  }
 
   showShoeDetails(shoe: Shoe) {
     this.showDetails.emit(shoe.id);

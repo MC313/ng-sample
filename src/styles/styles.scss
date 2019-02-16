@@ -130,11 +130,10 @@ Shoes
 *****************************/
 .shoes {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 90px);
     overflow-y: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 150px;
+    display: flex;
+    flex-flow: row wrap;
     position: absolute;
     top: 90px;
     left: 0;
@@ -143,6 +142,12 @@ Shoes
     transition: transform 0.4s ease;
     &.animate-section {
         transform: translateY(80%);
+    }
+
+    > * {
+        flex: 1;
+        flex-basis: 250px;
+        min-height: 250px;
     }
 }
 
@@ -156,7 +161,7 @@ Shoes
     border: 1px solid #999;
 }
 
-.details-overlay-container {
+.overlay-container {
     width: 100%;
     &.show {
         display: block;
@@ -179,13 +184,14 @@ Shoes
 
 .overlay-details {
     width: 100%;
+    max-width: 600px;
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
     background-color: #fff;
     transform: translateX(110%);
-    @media screen and (min-width: 650px) {
+    @media screen and (min-width: 651px) {
         width: 65%;
         padding: 25px;
     }
@@ -198,6 +204,57 @@ Shoes
         background-color: #000;
     }
     .overlay-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 50px;
+        .cart-action {
+            display: inline-flex;
+            flex-flow: row wrap;
+            justify-content: start;
+            align-items: center;
+        }
+        .name {
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 20px;
+            text-align: center;
+            @media screen and (min-width: 950px) {
+                width: auto;
+                flex: 2;
+                margin-bottom: 0px;
+            }
+        }
+        .divider {
+            width: 2px;
+            height: 30px;
+            display: none;
+            margin: 0px 20px;
+            background-color: #000000;
+            @media screen and (min-width: 950px) {
+               display: block;
+            }
+        }
+        .price {
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+            @media screen and (min-width: 950px) {
+                width: auto;
+                flex: 1;
+            }
+        }
+        .add-to-cart {
+            width: 100%;
+            max-width: 300px;
+            min-height: 35px;
+            display: block;
+            margin: 20px auto;
+        }
+        .description {
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+        }
     }
 }

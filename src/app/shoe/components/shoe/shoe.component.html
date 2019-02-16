@@ -1,5 +1,5 @@
 <li class="shoe">
   <p>{{shoeInfo.name}}</p>
-  <button type="button" (click)="addShoeToCart(shoeInfo)">Add to Cart</button>
+  <p>{{shoeInfo.price | currency: 'USD'}}</p>
   <button type="button" (click)="showShoeDetails(shoeInfo)">Details</button>
 </li>

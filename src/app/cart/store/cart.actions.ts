@@ -11,8 +11,6 @@ export enum CartActionTypes {
 
 export class LoadCart implements Action {
     readonly type = CartActionTypes.LOAD_CART;
-
-    //constructor(public payload: Cart = { products: [], totalPrice: 0 }) { }
 }
 
 export class AddProduct implements Action {

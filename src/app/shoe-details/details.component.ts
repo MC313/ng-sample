@@ -5,6 +5,7 @@ import { Store } from '@ngrx/store';
 
 import { OverlayState } from './OverlayState';
 import { Shoe } from '../shoe/Shoe';
+import * as CartActions from '../cart/store/cart.actions';
 import * as ShoeDetailsActions from './store/shoe-details.actions';
 import { ShoeDetailsState } from './store/shoe-details.state';
 
@@ -70,6 +71,11 @@ export class DetailsComponent {
 
   hideDetails(event) {
     this.store$.dispatch(new ShoeDetailsActions.HideShoeDetailsOverlay());
+  }
+
+  addToCart(shoe: Shoe) {
+    const product = { ...shoe, quantity: 1 };
+    this.store$.dispatch(new CartActions.AddProduct(product));
   }
 
   close() {
