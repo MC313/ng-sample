@@ -1,6 +1,8 @@
-# ShoeStore
+# Demo Angular Application
 
-The idea behind this application is to used it to experiment with integrating 3rd party technologies on new patterns into an Angular application.
+This application is a shoe store interface with basic functionality to add/remove items from a cart and view more information about a particular item.
+
+The purpose of this application is to use it to experiment with integrating 3rd party technologies and new design patterns into an Angular application.
 
 Current Technologies Integrated:
 - [ngrx](https://github.com/ngrx)
