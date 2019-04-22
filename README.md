@@ -9,7 +9,7 @@ Current Technologies Integrated:
 - lodash/fp
 - unit testing
 
-Potential Technologies/Conceptes to be Integrated:
+Potential Technologies/Concepts to be Integrated:
 - progressive web application (PWA)
 - [emotion](https://emotion.sh)
 - [immutablejs](https://facebook.github.io/immutable-js)
