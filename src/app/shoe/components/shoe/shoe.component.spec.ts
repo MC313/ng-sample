@@ -25,25 +25,25 @@ describe('ShoeComponent', () => {
     component = fixture.componentInstance;
     buttonElement = fixture.nativeElement;
     button = buttonElement.querySelector('button');
-    spyOn(component.addToCart, 'emit');
+    spyOn(component.showDetails, 'emit');
   });
 
   it('should create shoe component', () => {
     expect(component).toBeDefined();
   });
 
-  it('should contain a button with "Add to Cart" text', () => {
-    expect(button.textContent).toEqual('Add to Cart');
+  it('should contain a button with "details" text', () => {
+    expect(button.textContent).toEqual('details');
   });
 
-  it('should trigger emit event when "Add to Cart" button is clicked', () => {
+  it('should trigger emit event when "details" button is clicked', () => {
     button.click();
-    expect(component.addToCart.emit).toHaveBeenCalled();
+    expect(component.showDetails.emit).toHaveBeenCalled();
   });
 
-  it('should emit shoe info when "addShoeToCart" method is called with shoe info parameter', () => {
-    component.addShoeToCart(shoe);
-    expect(component.addToCart.emit).toHaveBeenCalledWith(shoe);
+  it('should emit shoe info when "showShoeDetails" method is called with shoe info parameter', () => {
+    component.showShoeDetails(shoe);
+    expect(component.showDetails.emit).toHaveBeenCalledWith(shoe.id);
   });
 
 });

@@ -22,7 +22,7 @@ describe('shoe.reducer', () => {
                 "sizes": ["8", "8.5", "9", "9.5", "10", "10.5", "11"]
             }
         ],
-        selectedShoe: 1
+        //selectedShoe: 1
     };
 
 });

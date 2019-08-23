@@ -62,15 +62,14 @@ describe('ShoesComponent', () => {
     });
 
     it('should call addToCart method when child component emits "addToCart" event', () => {
-        spyOn(component, 'addToCart');
+        spyOn(component, 'showDetails');
         const shoeComponents = fixture.debugElement.queryAll(By.directive(ShoeComponent));
-        //(<ShoeComponent>shoeComponents[0].componentInstance).addToCart.emit(shoe);
         shoeComponents[0].triggerEventHandler('addToCart', shoe);
-        expect(component.addToCart).toHaveBeenCalledWith(shoe);
+        expect(component.showDetails).toHaveBeenCalledWith(shoe);
     });
 
     it('should dispatch an action to add product to cart when addToCart method is called', () => {
-        component.addToCart(shoe);
+        component.showDetails(shoe.id);
         const product: Shoe & { quantity: 1 } = { ...shoe, quantity: 1 };
         const action = new CartActions.AddProduct(product);
         expect(store.dispatch).toHaveBeenCalledWith(action);
