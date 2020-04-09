@@ -6,7 +6,7 @@ import { Product } from '../Product';
 
 const selectFeature = createFeatureSelector<AppState, CartState>('cart');
 
-export const selectProductsInCart = createSelector(
+export const selectProductsInCart<CartState, Product[]> = createSelector(
     selectFeature,
     (cartState: CartState) => cartState.products
 );
